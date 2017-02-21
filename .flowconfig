@@ -1,0 +1,7 @@
+[ignore]
+.*/node_modules/jss/*
+.*/node_modules/fbjs/*
+.*/node_modules/config-chain/*
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src

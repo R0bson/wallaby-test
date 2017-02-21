@@ -1,0 +1,32 @@
+{
+  sourceMaps: "both",
+  compact: false,
+  "presets": [
+//    "react",
+    ["es2015", { modules: false }],
+    "stage-2"
+  ],
+//
+//  "plugins": [
+////    "transform-decorators-legacy",
+//    "transform-react-display-name",
+//    "transform-object-rest-spread",
+//    "react-hot-loader/babel",
+//    "syntax-flow",
+//  ],
+  
+  env: { // Based on BABEL_ENV
+    production: { // cross-env BABEL_ENV=production
+//      sourceMaps: false,
+//      minified: true,
+//      comments: false,
+//      compact: true,
+      plugins: [
+        // From React Lego starter https://github.com/peter-mouland/react-lego/blob/master/.babelrc
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    },
+  }
+}
